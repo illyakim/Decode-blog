@@ -1,0 +1,39 @@
+.header {
+    height: 130px
+}
+
+.header a {
+    color: #00A2DC;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #00A2DC;
+    color: white;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: #5cc6ec;
+    color: white
+}
+
+.input-group-text {
+    background-color: #00A2DC;
+    color: white;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: white
+}
+
+.input-group-text:hover {
+    background-color: #5cc6ec;
+    transition: .3s;
+}
+
+#search {
+    font-style: normal;
+}

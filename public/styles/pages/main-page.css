@@ -1,0 +1,47 @@
+.main {
+    background-color: #F5F5F5;
+}
+
+#nav-links a {
+    display: block;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    transition: .3s
+}
+
+#nav-links a:hover {
+    color: #85bcf6
+}
+
+.main h2 {
+    font-size: 36px;
+    font-weight: 500
+}
+
+.news {
+    padding-top: 50px
+}
+
+.blogs {
+    padding: 40px;
+    width: 70%;
+    margin-right: 40px;
+    margin-bottom: 60px;
+}
+
+.main-par {
+    font-weight: 400;
+    font-size: 20px
+}
+
+.article-1,
+.article-2 {
+    padding: 40px
+}
+
+.categories {
+    height: 30%;
+}
