@@ -7,18 +7,28 @@
 </head>
 
 <body>
-    <%- include('partials/header.ejs')%>
+    <%- include('partials/header-profile.ejs')%>
         <div class="main">
-            <div class="news d-flex justify-content-center">
+            <div class="news d-flex justify-content-center align-items-start">
                 <div class="blogs bg-white">
-                    <h2 class="text-center mb-4">Блоги по программированию</h2>
-                    <p class="text-center main-par">
-                        Популярные и лучшие публикации по программированию для начинающих
-                        и профессиональных программистов и IT-специалистов.
-                    </p>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Мои блоги</h2>
+                        <a href="/newblog">
+                            <button class="new-blog-btn">Новый блог</button>
+                        </a>
+                    </div>
+
                     <div class="article-1 text-center">
-                        <img src="../images/image main.png" alt="">
-                        <h3 class="text-start mb-2 mt-4">Обзор Report Manager от Webix</h3>
+                        <img src="../images/image main.png" alt="" class="mb-5">
+                        <div class="review-head d-flex justify-content-between">
+                            <h3 class="text-start mb-2">Обзор Report Manager от Webix</h3>
+                            <i class="fa-solid fa-ellipsis-vertical" onclick="changeModal()"></i>
+                            <div class="edit-del-btn shadow-sm p-2 bg-white" id="editdelbtn">
+                                <button>Редактировать</button>
+                                <button>Удалить</button>
+                            </div>
+                        </div>
+
                         <p class="text-start">
                             <br>Осень 2020 года стала плодотворным временем для специалистов Webix.</br>
                             <br>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с
@@ -32,7 +42,7 @@
                             Report
                             Manager. Давайте рассмотрим его</br>
                         </p>
-                        <div class=" details-1 d-flex justify-content-between">
+                        <div class=" details-1 d-flex justify-content-between mt-5">
                             <div>
                                 <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
                                 <i id="search">26.06.2020</i>
@@ -57,8 +67,12 @@
                     </div>
                     <div class="article-2 text-center">
                         <img src="../images/image main 2.png" alt="" class="mb-5">
-                        <h3 class="text-start mb-2">Разработчики изобрели методологию высокоскоростного программирования
-                        </h3>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3 class="text-start mb-2">Разработчики изобрели методологию высокоскоростного
+                                программирования
+                            </h3>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
                         <p class="text-start">
                             <br>Осень 2020 года стала плодотворным временем для специалистов Webix.</br>
                             <br>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с
@@ -96,25 +110,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="categories bg-white shadow p-3 mb-5 bg-white rounded pb-4">
-                    <h2 class="mb-4 mt-4">Категории</h2>
-                    <div id="nav-links">
-                        <a href="">Прогнозы в IT</a>
-                        <a href="">Веб-разработка</a>
-                        <a href="">Мобильная разработка</a>
-                        <a href="">Фриланс</a>
-                        <a href="">Алгоритмы</a>
-                        <a href="">Тестирование IT систем</a>
-                        <a href="">Разработка игр</a>
-                        <a href="">Дизайн и юзабилити</a>
-                        <a href="">Искуственный интеллект</a>
-                        <a href="">Машинное обучение</a>
-                    </div>
+                <div
+                    class="blog-bio bg-white shadow d-flex flex-column justify-content-center align-items-center text-center">
+                    <img src="/images/profile.jpg" alt="">
+                    <h3>Jane Doe</h3>
+                    <p>
+                        В основном пишу про веб - разработку на React & Redux
+                    </p>
+                    <span>285 постов за все время</span>
+                    <button class="edit-btn">Редактировать</button>
                 </div>
             </div>
         </div>
-
-
 
 </body>
 

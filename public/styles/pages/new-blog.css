@@ -1,0 +1,21 @@
+.new-blog {
+    padding: 30px;
+    height: 75vh
+}
+
+.new-blog input {
+    border: 1px solid #E7E7E7;
+    width: 50%
+}
+
+.new-blog button {
+    width: 10%
+}
+
+#choose-img {
+    border: none
+}
+
+#description {
+    padding-bottom: 80px;
+}

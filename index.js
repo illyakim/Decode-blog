@@ -4,6 +4,8 @@ const app = express();
 
 app.set("view engine", "ejs");
 
+app.use(express.static(__dirname + '/public'))
+
 app.use(express.static("public"));
 
 app.get('/', (req, res) => {
@@ -17,6 +19,15 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register.ejs')
 })
+
+app.get('/profile', (req, res) => {
+    res.render('profile.ejs')
+})
+
+app.get('/newblog', (req, res) => {
+    res.render('new-blog.ejs')
+})
+
 
 
 const PORT = 8000;

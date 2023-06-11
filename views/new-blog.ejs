@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs')%>
+        <title>Decode Blog</title>
+</head>
+
+<body>
+    <%- include('partials/header-profile.ejs')%>
+
+        <div class="form">
+            <div class="new-blog container d-flex flex-column bg-white">
+                <h3>Новый блог</h3>
+                <input type="text" placeholder="Введите заголовок блога" name="name">
+                <input type="text" placeholder="Выберите категорию" name="category">
+                <input type="file" placeholder="Выберите картинку" name="image" id="choose-img">
+                <!-- Как стилизовать? -->
+
+                <input type="text" placeholder="Введите описание блога" id="description">
+                <button type="submit">Создать</button>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

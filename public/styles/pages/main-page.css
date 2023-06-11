@@ -26,7 +26,7 @@
 }
 
 .blogs {
-    padding: 40px;
+    padding: 80px;
     width: 70%;
     margin-right: 40px;
     margin-bottom: 60px;
@@ -37,11 +37,16 @@
     font-size: 20px
 }
 
-.article-1,
-.article-2 {
-    padding: 40px
+.blogs img {
+    width: 100%
 }
 
 .categories {
     height: 30%;
+    width: 20%
+}
+
+.article-1 {
+    margin-top: 40px;
+    margin-bottom: 60px
 }
