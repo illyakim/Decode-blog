@@ -99,16 +99,12 @@
                 <div class="categories bg-white shadow p-3 mb-5 bg-white rounded pb-4">
                     <h2 class="mb-4 mt-4">Категории</h2>
                     <div id="nav-links">
-                        <a href="">Прогнозы в IT</a>
-                        <a href="">Веб-разработка</a>
-                        <a href="">Мобильная разработка</a>
-                        <a href="">Фриланс</a>
-                        <a href="">Алгоритмы</a>
-                        <a href="">Тестирование IT систем</a>
-                        <a href="">Разработка игр</a>
-                        <a href="">Дизайн и юзабилити</a>
-                        <a href="">Искуственный интеллект</a>
-                        <a href="">Машинное обучение</a>
+                        <% categories.forEach(category=>{
+                            %>
+                            <a href="/<%= category.key%>">
+                                <%=category.name%>
+                            </a>
+                            <% })%>
                     </div>
                 </div>
             </div>

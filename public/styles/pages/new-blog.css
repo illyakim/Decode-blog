@@ -1,14 +1,27 @@
 .new-blog {
     padding: 30px;
-    height: 75vh
+    height: 75vh;
 }
 
-.new-blog input {
+.new-blog-details {
+    width: 100%
+}
+
+.new-blog-details select {
+    border: 1px solid #E7E7E7;
+}
+
+.new-blog-details fieldset {
+    padding-left: 10px;
+    margin-bottom: 10px
+}
+
+.new-blog-details input {
     border: 1px solid #E7E7E7;
     width: 50%
 }
 
-.new-blog button {
+.new-blog-details button {
     width: 10%
 }
 

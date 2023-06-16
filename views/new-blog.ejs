@@ -10,15 +10,25 @@
     <%- include('partials/header-profile.ejs')%>
 
         <div class="form">
-            <div class="new-blog container d-flex flex-column bg-white">
-                <h3>Новый блог</h3>
-                <input type="text" placeholder="Введите заголовок блога" name="name">
-                <input type="text" placeholder="Выберите категорию" name="category">
-                <input type="file" placeholder="Выберите картинку" name="image" id="choose-img">
-                <!-- Как стилизовать? -->
-
-                <input type="text" placeholder="Введите описание блога" id="description">
-                <button type="submit">Создать</button>
+            <div class="new-blog container bg-white">
+                <div class="new-blog-details d-flex flex-column ">
+                    <h3>Новый блог</h3>
+                    <input type="text" placeholder="Введите заголовок блога" name="name">
+                    <fieldset>
+                        <label for="">Выберите категорию</label>
+                        <select name="category" id="">
+                            <% categories.forEach(category=>{
+                                %>
+                                <option value="">
+                                    <%=category.name%>
+                                </option>
+                                <% })%>
+                        </select>
+                    </fieldset>
+                    <input type="file" placeholder="Выберите картинку" name="image" id="choose-img">
+                    <input type="text" placeholder="Введите описание блога" id="description">
+                    <button type="submit">Создать</button>
+                </div>
             </div>
         </div>
 
