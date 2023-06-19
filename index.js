@@ -5,14 +5,14 @@ const app = express();
 require('./server/config/db')
 
 app.set("view engine", "ejs");
-
-app.use(require('./server/pages/router'))
-
-app.use(require('./server/Categories/router'))
-
-app.use(express.static(__dirname + '/public'))
-
 app.use(express.static("public"));
+app.use(express.urlencoded())
+
+app.use(require('./server/pages/router'));
+app.use(require('./server/Categories/router'));
+app.use(require('./server/auth/router'))
+
+
 
 
 

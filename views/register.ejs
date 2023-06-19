@@ -8,13 +8,16 @@
 
 <body>
     <%- include('partials/header.ejs')%>
-        <div class="form">
-            <h3>Регистрация</h3>
-            <input type="text" placeholder="Введите email" name="email">
-            <input type="text" placeholder="Введите полное имя" name="name">
-            <input type="text" placeholder="Введите пароль" name="password">
-            <input type="text" placeholder="Подтвердите пароль" name="re-password">
-            <button type="submit">Зарегистрироваться</button>
+        <div>
+            <form action="/api/signup" method="POST" class="form">
+                <h3>Регистрация</h3>
+                <input type="text" placeholder="Введите email" name="email">
+                <input type="text" placeholder="Введите полное имя" name="full_name">
+                <input type="text" placeholder="Введите пароль" name="password">
+                <input type="text" placeholder="Подтвердите пароль" name="re_password">
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+
         </div>
 
 
