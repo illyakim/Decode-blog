@@ -8,13 +8,12 @@
 
 <body>
     <%- include('partials/header.ejs')%>
-        <div class="form">
+        <form action="/api/signin" method="POST" class="form">
             <h3>Вход</h3>
             <input type="text" placeholder="Введите email" name="email">
             <input type="text" placeholder="Введите пароль" name="password">
             <button type="submit">Войти</button>
-        </div>
-
+        </form>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <%- include('partials/header-profile.ejs')%>
+    <%- include('partials/header.ejs')%>
         <div class="main">
             <div class="news d-flex justify-content-center align-items-start">
                 <div class="blogs bg-white">
@@ -113,7 +113,9 @@
                 <div
                     class="blog-bio bg-white shadow d-flex flex-column justify-content-center align-items-center text-center">
                     <img src="/images/profile.jpg" alt="">
-                    <h3>Jane Doe</h3>
+                    <h3>
+                        <%=user.full_name%>
+                    </h3>
                     <p>
                         В основном пишу про веб - разработку на React & Redux
                     </p>

@@ -17,8 +17,13 @@
 
         </div>
         <div class="d-grid gap-2 d-md-block">
-            <a href="/register"><button class="btn" type="button">Регистрация</button></a>
-            <a href="/login"><button class="btn" type="button">Вход</button></a>
+            <% if(user._id && user.email.length> 0){
+                %>
+                <a href="/api/signout"><button class="btn" type="button">Выйти</button></a>
+                <% } else{ %>
+                    <a href="/register"><button class="btn" type="button">Регистрация</button></a>
+                    <a href="/login"><button class="btn" type="button">Вход</button></a>
+                    <%}%>
         </div>
     </div>
 </div>
