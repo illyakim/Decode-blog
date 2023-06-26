@@ -120,7 +120,9 @@
                         В основном пишу про веб - разработку на React & Redux
                     </p>
                     <span>285 постов за все время</span>
-                    <button class="edit-btn">Редактировать</button>
+                    <% if (loginUser.id==user.id){ %>
+                        <a href=""><button class="edit-btn">Редактировать</button></a>
+                        <% } %>
                 </div>
             </div>
         </div>
