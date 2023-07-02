@@ -27,6 +27,7 @@ app.use(passport.session())
 app.use(require('./server/pages/router'));
 app.use(require('./server/Categories/router'));
 app.use(require('./server/auth/router'))
+app.use(require('./server/Blogs/router'))
 
 
 

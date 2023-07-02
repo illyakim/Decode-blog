@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs')%>
+        <title>Decode Blog</title>
+</head>
+
+<body>
+    <%- include('partials/header.ejs')%>
+
+        <div class="form">
+            <div class="new-blog container bg-white">
+                <div class="new-blog-details d-flex flex-column ">
+                    <form action="/api/blogs/editblog" method="POST" enctype="multipart/form-data"
+                        class="d-flex flex-column">
+                        <h3>Редактировать блог</h3>
+                        <input type="text" value="<%=blog.name%>" placeholder="Введите заголовок блога" name="name">
+                        <fieldset>
+                            <input type="hidden" value="<%=blog._id%>" name="id">
+                        </fieldset>
+                        <fieldset>
+                            <label for="">Выберите категорию</label>
+                            <select name="category" id="">
+                                <% categories.forEach(category=>{
+                                    if(category.id==blog.category){
+                                    %>
+                                    <option value="<%=category._id%>" selected>
+                                        <%=category.name%>
+                                    </option>
+                                    <%} else{%>
+                                        <option value="<%=category._id%>">
+                                            <%=category.name%>
+                                        </option>
+                                        <% }})%>
+                            </select>
+                        </fieldset>
+                        <input type="file" placeholder="Выберите картинку" name="image" id="choose-img">
+                        <input type="text" value="<%=blog.description%>" placeholder="Введите описание блога"
+                            name="description">
+                        <button type="submit">Сохранить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
