@@ -12,93 +12,14 @@
             <div class="news d-flex justify-content-center">
                 <div class="blogs bg-white">
                     <h2 class="text-center mb-4">Блоги по программированию</h2>
-                    <p class="text-center main-par">
+                    <p class="text-center main-par mb-5">
                         Популярные и лучшие публикации по программированию для начинающих
                         и профессиональных программистов и IT-специалистов.
                     </p>
-                    <div class="article-1 text-center">
-                        <img src="../images/image main.png" alt="">
-                        <h3 class="text-start mb-2 mt-4">Обзор Report Manager от Webix</h3>
-                        <p class="text-start">
-                            <br>Осень 2020 года стала плодотворным временем для специалистов Webix.</br>
-                            <br>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с
-                            двумя
-                            новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее.
-                            Второй
-                            виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти
-                            в
-                            статье.</br>
-                            <br>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом
-                            Report
-                            Manager. Давайте рассмотрим его</br>
-                        </p>
-                        <div class=" details-1 d-flex justify-content-between">
-                            <div>
-                                <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">26.06.2020</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-eye me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">21</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comment me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">4</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comments me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Веб-разработка</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-user me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Nast1289</i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article-2 text-center">
-                        <img src="../images/image main 2.png" alt="" class="mb-5">
-                        <h3 class="text-start mb-2">Разработчики изобрели методологию высокоскоростного программирования
-                        </h3>
-                        <p class="text-start">
-                            <br>Осень 2020 года стала плодотворным временем для специалистов Webix.</br>
-                            <br>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с
-                            двумя
-                            новыми
-                            комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. Второй
-                            виджет
-                            - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в
-                            статье.</br>
-                            <br>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом
-                            Report
-                            Manager. Давайте рассмотрим его</br>
-                        </p>
-                        <div class="details-2 d-flex justify-content-between mt-5">
-                            <div>
-                                <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">26.06.2020</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-eye me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">21</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comment me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">4</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comments me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Веб-разработка</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-user me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Nast1289</i>
-                            </div>
-                        </div>
-                    </div>
 
                     <% blogs.forEach(item=>{
                         %>
-                        <div class="article-2 text-center">
+                        <div class="article text-center">
                             <img src="<%=item.image%>" alt="" class="mb-5">
                             <h2 class="text-start mb-2">
                                 <%=item.name%>
@@ -108,7 +29,7 @@
                                     <p class="text-start">
                                         <%=item.description%>
                                     </p>
-                                    <div class="details-2 d-flex justify-content-between mt-5">
+                                    <div class="details-2 d-flex justify-content-between mt-3 mb-5">
                                         <div>
                                             <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
                                             <i id="search">26.06.2020</i>
@@ -127,7 +48,10 @@
                                         </div>
                                         <div>
                                             <i class="fa-solid fa-user me-2" style="color: #9c9ea2;"></i>
-                                            <i id="search">Nast1289</i>
+                                            <i id="search">
+                                                <%=item.author%>
+                                                    <!-- Как поставить имя юзера? -->
+                                            </i>
                                         </div>
                                     </div>
                         </div>

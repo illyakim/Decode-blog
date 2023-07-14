@@ -18,91 +18,8 @@
                         </a>
                     </div>
 
-                    <div class="article text-center mt-5">
-                        <img src="../images/image main.png" alt="" class="mb-5">
-                        <h3 class="review-head d-flex justify-content-between text-start mb-2">Обзор Report Manager от
-                            Webix</h3>
-                        <p class="text-start">
-                            <br>Осень 2020 года стала плодотворным временем для специалистов Webix.</br>
-                            <br>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с
-                            двумя
-                            новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее.
-                            Второй
-                            виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти
-                            в
-                            статье.</br>
-                            <br>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом
-                            Report
-                            Manager. Давайте рассмотрим его</br>
-                        </p>
-                        <div class=" details-1 d-flex justify-content-between mt-5">
-                            <div>
-                                <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">26.06.2020</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-eye me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">21</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comment me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">4</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comments me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Веб-разработка</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-user me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Nast1289</i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article text-center mt-5">
-                        <img src="../images/image main 2.png" alt="" class="mb-5">
-                        <h3 class="d-flex justify-content-between align-items-center text-start mb-2">Разработчики
-                            изобрели методологию высокоскоростного
-                            программирования
-                        </h3>
-                        <p class="text-start">
-                            <br>Осень 2020 года стала плодотворным временем для специалистов Webix.</br>
-                            <br>Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с
-                            двумя
-                            новыми
-                            комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. Второй
-                            виджет
-                            - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в
-                            статье.</br>
-                            <br>Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом
-                            Report
-                            Manager. Давайте рассмотрим его</br>
-                        </p>
-                        <div class="details-2 d-flex justify-content-between mt-5">
-                            <div>
-                                <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">26.06.2020</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-eye me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">21</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comment me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">4</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-comments me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Веб-разработка</i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-user me-2" style="color: #9c9ea2;"></i>
-                                <i id="search">Nast1289</i>
-                            </div>
-                        </div>
-                    </div>
-
                     <% blogs.forEach(item=>{
-                        %>
+                        if (loginUser.id==user.id && loginUser.id==item.author.id){ %>
                         <div class="article text-center mt-5">
                             <img src="<%=item.image%>" alt="" class="mb-5">
                             <h2 class="text-start mb-2">
@@ -113,38 +30,41 @@
                             <p class="text-start">
                                 <%=item.description%>
                             </p>
-                            <% if (loginUser.id==user.id){ %>
-                                <a href="/editblog/<%=item._id%>"><button class="edit-btn ">Редактировать</button></a>
-                                <% } %>
-                                    <div class="details-2 d-flex justify-content-between mt-5">
-                                        <div>
-                                            <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
-                                            <i id="search">26.06.2020</i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-eye me-2" style="color: #9c9ea2;"></i>
-                                            <i id="search">21</i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-comment me-2" style="color: #9c9ea2;"></i>
-                                            <i id="search">4</i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-comments me-2" style="color: #9c9ea2;"></i>
-                                            <i id="search">Веб-разработка</i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-solid fa-user me-2" style="color: #9c9ea2;"></i>
-                                            <i id="search">Nast1289</i>
-                                        </div>
-                                    </div>
+
+                            <a href="/editblog/<%=item._id%>"><button class="edit-btn ">Редактировать</button></a>
+
+                            <div class="details-2 d-flex justify-content-between mt-5">
+                                <div>
+                                    <i class="fa-regular fa-calendar me-2" style="color: #9c9ea2;"></i>
+                                    <i id="search">26.06.2020</i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-eye me-2" style="color: #9c9ea2;"></i>
+                                    <i id="search">21</i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-comment me-2" style="color: #9c9ea2;"></i>
+                                    <i id="search">4</i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-comments me-2" style="color: #9c9ea2;"></i>
+                                    <i id="search">Веб-разработка</i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-user me-2" style="color: #9c9ea2;"></i>
+                                    <i id="search">
+                                        <%=user.full_name%>
+                                    </i>
+                                </div>
+                            </div>
                         </div>
-                        <% }) %>
+                        <% } %>
+                            <% }) %>
 
                 </div>
                 <div
                     class="blog-bio bg-white shadow d-flex flex-column justify-content-center align-items-center text-center">
-                    <img src="/images/profile.jpg" alt="">
+                    <img src="/images/default image.png" alt="">
                     <h3>
                         <%=user.full_name%>
                     </h3>
@@ -152,9 +72,6 @@
                         В основном пишу про веб - разработку на React & Redux
                     </p>
                     <span>285 постов за все время</span>
-                    <!-- <% if (loginUser.id==user.id){ %>
-                        <a href="/editblog"><button class="edit-btn">Редактировать</button></a>
-                        <% } %> -->
                 </div>
             </div>
         </div>

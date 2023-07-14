@@ -17,8 +17,9 @@
 
         </div>
         <div class="d-grid gap-2 d-md-block">
-            <% if(user.id){ %>
+            <% if(user._id){ %>
                 <div>
+                    <a href="/profile/<%=user._id%>"><button class="btn" type="button">Профиль</button></a>
                     <a href="/api/signout"><button class="btn" type="button">Выйти</button></a>
                 </div>
                 <% } else{ %>

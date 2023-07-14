@@ -41,8 +41,9 @@ const signOut = (req, res) => {
     res.redirect('/')
 }
 
+
 module.exports = {
     signUp,
     signIn,
-    signOut,
+    signOut
 }
