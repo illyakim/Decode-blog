@@ -1,0 +1,7 @@
+.details {
+    padding: 40px
+}
+
+.details h1:first-child {
+    color: #00a2dc
+}
