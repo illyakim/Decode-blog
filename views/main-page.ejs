@@ -63,19 +63,27 @@
                             </div>
                         </div>
                         <% }) %>
+                            <div class="pages">
+                                <% for(let i=0;i < pages;i++){ %>
+                                    <a href="?page=<%=i%>">
+                                        <%=i+1%>
+                                    </a>
+                                    <% } %>
+                            </div>
                 </div>
                 <div class="categories bg-white shadow p-3 mb-5 bg-white rounded pb-4">
                     <h2 class="mb-4 mt-4">Категории</h2>
                     <div id="nav-links">
                         <% categories.forEach(category=>{
                             %>
-                            <a href="/<%= category.key%>">
+                            <a href="?categ=<%= category.key%>">
                                 <%=category.name%>
                             </a>
                             <% })%>
                     </div>
                 </div>
             </div>
+
         </div>
 
 

@@ -6,9 +6,21 @@ const Blog = require('../Blogs/Blogs')
 const Blogs = require('../Blogs/Blogs')
 
 router.get('/', async (req, res) => {
+    const options = {}
+    const categories = await Categories.findOne({ key: req.query.categ })
+    if (categories) {
+        options.category = categories._id
+    }
+    let page = 0
+    const limit = 3
+    if (req.query.page && req.query.page > 0) {
+        page = req.query.page
+    }
+    const totalBlogs = await Blogs.count()
+    console.log(totalBlogs)
     const allCategories = await Categories.find()
-    const blogs = await Blogs.find().populate('category').populate('author')
-    res.render('main-page.ejs', { categories: allCategories, user: req.user ? req.user : {}, blogs })
+    const blogs = await Blogs.find(options).limit(limit).skip(page * limit).populate('category').populate('author')
+    res.render('main-page.ejs', { categories: allCategories, user: req.user ? req.user : {}, blogs, pages: Math.ceil(totalBlogs / limit) })
 })
 
 router.get('/login', (req, res) => {
@@ -46,8 +58,9 @@ router.get('/not-found', (req, res) => {
     res.render("notFound")
 })
 
-router.get('/detail/:id', (req, res) => {
-    res.render("detail", { user: {} })
+router.get('/detail/:id', async (req, res) => {
+    const blog = await Blogs.findById(req.params.id).populate('category')
+    res.render("detail", { user: req.user ? req.user : {}, blog: blog })
 })
 
 module.exports = router

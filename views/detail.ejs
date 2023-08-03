@@ -14,14 +14,15 @@
             <div class="main">
                 <div class="details">
                     <h1 class="mb-5">Детали блога</h1>
-                    <img src="/images/image main.png" alt="" class="mb-3">
+                    <img src="<%=blog.image%>" alt="" class="mb-3">
                     <h2 class="text-start mb-2">
-                        1
+                        <%=blog.name%>
                     </h2>
-                    <h4 class="text-start mb-2">2
+                    <h4 class="text-start mb-2">
+                        <%=blog.category.name%>
                     </h4>
                     <p class="text-start">
-                        3
+                        <%=blog.description%>
                     </p>
                 </div>
             </div>
