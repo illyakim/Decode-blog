@@ -10,13 +10,27 @@ router.get('/', async (req, res) => {
     const categories = await Categories.findOne({ key: req.query.categ })
     if (categories) {
         options.category = categories._id
+        res.locals.category = req.query.categ
     }
     let page = 0
     const limit = 3
     if (req.query.page && req.query.page > 0) {
         page = req.query.page
     }
-    const totalBlogs = await Blogs.count()
+    if(req.query.search && req.query.search.length>0){
+        options.$or=[
+            {
+            name:new RegExp(req.query.search, 'i')
+            },
+            {
+            description:new RegExp(req.query.search, 'i')
+            },
+        ]
+        res.locals.search=req.query.search
+    }
+
+
+    const totalBlogs = await Blogs.count(options)
     console.log(totalBlogs)
     const allCategories = await Categories.find()
     const blogs = await Blogs.find(options).limit(limit).skip(page * limit).populate('category').populate('author')

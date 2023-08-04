@@ -3,8 +3,8 @@
         <a href="/">
             <h2 class="fs-1">Decode Blog</h2>
         </a>
-        <div class="input-group w-50">
-            <input type="text" class="form-control search" placeholder="Поиск по блогам"
+        <form class="input-group w-50">
+            <input name="search" type="text" class="form-control search" placeholder="Поиск по блогам"
                 aria-describedby="basic-addon2">
 
             <span class="input-group-text" id="basic-addon2">
@@ -13,9 +13,7 @@
                     <i id="search">Найти</i>
                 </button>
             </span>
-
-
-        </div>
+        </form>
         <div class="d-grid gap-2 d-md-block">
             <% if(user._id){ %>
                 <div>
