@@ -27,9 +27,10 @@
                     <div class="comments">
                         <h3>Комментарий</h3>
                         <% if (user && user._id){%>
-                        <form action="" class="add-comment-form">
-                            <textarea name="text"></textarea>
-                            <button>Сохранить</button>
+                        <form onSubmit="sendComment(event)" class="add-comment-form">
+                            <textarea id="comment-text"></textarea>
+                            <input type="hidden" value="<%=user._id%>" id="comment_author">
+                            <button type="submit">Сохранить</button>
                         </form>
                         <%} else {%>
                             <p>
@@ -45,7 +46,7 @@
             </div>
 
         </div>
-
+        <%- include('partials/scripts.ejs')%>
 </body>
 
 </html>
