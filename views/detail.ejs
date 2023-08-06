@@ -30,6 +30,7 @@
                         <form onSubmit="sendComment(event)" class="add-comment-form">
                             <textarea id="comment-text"></textarea>
                             <input type="hidden" value="<%=user._id%>" id="comment_author">
+                            <input type="hidden" value="<%=blog._id%>" id="comment_blog">
                             <button type="submit">Сохранить</button>
                         </form>
                         <%} else {%>
