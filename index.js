@@ -12,6 +12,7 @@ require('./server/config/passport')
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded())
+app.use(express.json());
 app.use(session({
     name: 'decode.session',
     secret: 'keyboard cat',

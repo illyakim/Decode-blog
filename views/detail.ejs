@@ -25,12 +25,12 @@
                         <%=blog.description%>
                     </p>
                     <div class="comments">
-                        <h3>Комментарий</h3>
+                        <h3>Ваш комментарий</h3>
                         <% if (user && user._id){%>
                         <form onSubmit="sendComment(event)" class="add-comment-form">
                             <textarea id="comment-text"></textarea>
                             <input type="hidden" value="<%=user._id%>" id="comment_author">
-                            <input type="hidden" value="<%=blog._id%>" id="comment_blog">
+                            <input type="hidden" value="<%=blog._id%>" id="comment_blog_id">
                             <button type="submit">Сохранить</button>
                         </form>
                         <%} else {%>
@@ -41,6 +41,23 @@
                                 чтобы оставить комментарий
                             </p>
                             <%}%>
+                    </div>
+                    <h4 class="mt-5">Комментарии</h4>
+                    <div class="saved-comments">
+                        <% comments.forEach(comment=>{%>
+                            <div id="comment-author">
+                                <p>
+                                    <%=user.full_name%>
+                                </p>
+                    
+                            </div>
+                            <p id="comment-text">
+                                <%=comment.text%>
+                            </p>
+                            <p id="comment-date">
+                                <%=comment.date%>
+                            </p>
+                            <% }) %>
                     </div>
                 </div>
 

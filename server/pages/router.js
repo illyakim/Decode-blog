@@ -4,6 +4,7 @@ const Categories = require('../Categories/Categories')
 const User = require('../auth/User')
 const Blog = require('../Blogs/Blogs')
 const Blogs = require('../Blogs/Blogs')
+const Comments = require('../Comments/Comments')
 
 router.get('/', async (req, res) => {
     const options = {}
@@ -73,8 +74,10 @@ router.get('/not-found', (req, res) => {
 })
 
 router.get('/detail/:id', async (req, res) => {
+    const comments = await Comments.find({ blogId: req.params.id })
+    console.log(comments)
     const blog = await Blogs.findById(req.params.id).populate('category')
-    res.render("detail", { user: req.user ? req.user : {}, blog: blog })
+    res.render("detail", { user: req.user ? req.user : {}, blog: blog, comments })
 })
 
 module.exports = router

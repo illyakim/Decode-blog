@@ -30,15 +30,18 @@ passport.use(new GoogleStrategy({
     scope: ['openid', 'email', 'profile']
 },
     async function (accessToken, refreshToken, profile, cb) {
-        const user = await User.find({ googleId: profile.id })
-        console.log(profile)
+    const user = await User.findOne({ googleId: profile.id })
+    console.log(user);
+    if (!user) {
         const newUser = await new User({
             googleId: profile.id,
             full_name: profile.displayName,
             email: profile.emails[0].value
         }).save()
         return cb(null, newUser)
-    }
+    } else return cb(null, user)
+
+}
 ));
 
 passport.serializeUser(function (user, done) {

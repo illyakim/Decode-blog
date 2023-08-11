@@ -5,3 +5,20 @@
 .details h1:first-child {
     color: #00a2dc
 }
+.saved-comments {
+    margin: 30px 0;
+}
+
+#comment-author {
+    font-weight: bold;
+}
+
+#comment-date {
+    font-size: 10px;
+}
+
+#comment-author,
+#comment-date,
+#comment-text {
+    padding-bottom: 0px
+}
